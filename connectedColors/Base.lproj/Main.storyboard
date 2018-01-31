@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tOI-XR-80y">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Colors-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ColorSwitchViewController" customModule="connectedColors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oke-Q6-o9E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connections: " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uWc-Bb-RJB">
+                                <rect key="frame" x="16" y="112" width="343" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="FEa-Av-6Kz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InN-lr-vvA">
+                                <rect key="frame" x="48" y="184" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="Zs4-ma-y1y"/>
+                                </constraints>
+                                <state key="normal" title="Red"/>
+                                <connections>
+                                    <action selector="redTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N9g-Mc-31y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWM-oO-Xeq">
+                                <rect key="frame" x="144" y="184" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="eCj-va-czV"/>
+                                </constraints>
+                                <state key="normal" title="Yellow"/>
+                                <connections>
+                                    <action selector="yellowTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RRv-dh-1HM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uWc-Bb-RJB" firstAttribute="top" secondItem="sEb-Mu-Y94" secondAttribute="top" constant="48" id="FJD-kS-W65"/>
+                            <constraint firstItem="InN-lr-vvA" firstAttribute="top" secondItem="uWc-Bb-RJB" secondAttribute="bottom" constant="16" id="MDA-mJ-gPu"/>
+                            <constraint firstItem="uWc-Bb-RJB" firstAttribute="leading" secondItem="sEb-Mu-Y94" secondAttribute="leading" constant="16" id="RJP-cG-SJy"/>
+                            <constraint firstItem="sEb-Mu-Y94" firstAttribute="trailing" secondItem="uWc-Bb-RJB" secondAttribute="trailing" constant="16" id="TMd-r3-hEI"/>
+                            <constraint firstItem="InN-lr-vvA" firstAttribute="leading" secondItem="sEb-Mu-Y94" secondAttribute="leading" constant="48" id="jwW-Xa-RxU"/>
+                            <constraint firstItem="hWM-oO-Xeq" firstAttribute="top" secondItem="uWc-Bb-RJB" secondAttribute="bottom" constant="16" id="pVo-KV-JJY"/>
+                            <constraint firstItem="hWM-oO-Xeq" firstAttribute="leading" secondItem="InN-lr-vvA" secondAttribute="trailing" constant="48" id="qUc-oi-Y7L"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sEb-Mu-Y94"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Colors" id="eHN-aK-ytW"/>
+                    <connections>
+                        <outlet property="connectionsLabel" destination="uWc-Bb-RJB" id="2GS-DK-Yj5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tE5-1s-shm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tOI-XR-80y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j2A-Oi-hhE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aWO-nm-wVq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eks-76-fRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-329" y="134"/>
+        </scene>
+    </scenes>
+</document>
